@@ -19,6 +19,7 @@ const App = () => {
       <div className="display-notes">
         <NoteList />
       </div>
+      <hr />
       <div className="display-input">
         <div>
           <NoteDisplay text={note} title={title} />
@@ -28,6 +29,8 @@ const App = () => {
           <MarkdownInput onChange={(value) => handleNote(value)} />
         </div>
       </div>
+      <hr />
+      <button onClick = {() => localStorage.clear()}> Détruire toutes les notes </button>
     </div>
   )
 }

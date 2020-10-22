@@ -12,8 +12,11 @@ const MarkdownInput = (note) => {
 
   note.onChange(input);
 
-  const saveNote = () => {
+  const saveNote = (e) => {
+    //e.preventDefault();
     localStorage.setItem(input.title, input.note);
+    e.currentTarget.name = "";
+    e.currentTarget.value = "";
   }
 
   return (
@@ -28,7 +31,7 @@ const MarkdownInput = (note) => {
             <label>Note : </label>
             <textarea type="text" name="note" onChange={handleInputChange} />
           </div>
-          <button type="submit" onClick={saveNote()}>Enregistrer</button>
+          <button type="submit" onClick={(e) => saveNote(e)}>Enregistrer</button>
         </form>
       </div>
     </div>
