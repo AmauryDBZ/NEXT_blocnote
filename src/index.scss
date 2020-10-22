@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  height: 100%;
+}
+
+.display-notes {
+  flex: 1;
+  flex-direction: column;
+}
+
+.display-input {
+  flex: 4;
+  flex-direction: column;
+}
